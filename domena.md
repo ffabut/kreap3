@@ -5,18 +5,22 @@ Protože pamatovat si IP adresy je pro lidi nepřirozené, vznikla potřeba něj
 Řešením, které vzniklo a dodnes se používá je protokol DNS (domain name system).
 Jde o federativní protokol, který umožňuje překlad doménových jmen na IP adresy.
 
-## Jak to funguje
+## Úvod
+### Jak to funguje
 Když zadáme do prohlížeče nějakou doménu, například favu.vut.cz, prohlížeč se zeptá na DNS server, který je zodpovědný za doménu vut.cz, na jakou IP adresu má odkazovat doména favu.vut.cz.
 Tento server mu odpoví, že má odkazovat na IP adresu 147.229.2.90 a prohlížeč se potom připojí na tuto IP adresu a požádá o obsah stránky.
 Právo na změnu IP adresy, na kterou doména odkazuje, má vlastník domény, který si platí registraci domény u registrátora.
 
-## Jak zjistit IP adresu
+### Jak zjistit IP adresu
 Zjistit IP adresu můžeme například na Linuxu/Macu: `dig +short favu.vut.cz`, nebo na Windowsu: `nslookup favu.vut.cz`.
 
-## Hack - vlastní DNS server
+### Hack - vlastní DNS server
 Pokud si chceme vyzkoušet, jak DNS funguje, můžeme si na svém počítači nastavit vlastní DNS server, který bude odpovídat na dotazy o domény.
 Případně nastavit DNS v síti, kterou ovládáme, tak, aby místo pravdivých odpovědí poskytovala naše vlastní odpovědi.
 Jde o jednoduchý způsob, jak si vyzkoušet, jak DNS funguje, a také jak se dá DNS zneužít k uměleckým intervencím na síť.
+
+## Prakticky
+
 
 # Web 
 To, co jako uživatelstvo považujeme za webovou stránku, není ve své podstatě nic jiného než HTML soubor (často doplněný o CSS a JavaScript), který našemu prohlížeči na dané URI (uniform resource identifier) adrese poskytuje vzdálený počítač.
