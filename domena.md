@@ -1,5 +1,4 @@
 # Registrace Domény
-
 Počítače jsou v síti identifikované pomocí IP adresy, například: 147.229.2.90 (IPv4), nebo novější 2001:718:1:1::1 (IPv6).
 Protože pamatovat si IP adresy je pro lidi nepřirozené, vznikla potřeba nějakého lidsky čitelného způsobu, jak se k počítači dostat.
 Řešením, které vzniklo a dodnes se používá je protokol DNS (domain name system).
@@ -20,7 +19,58 @@ Případně nastavit DNS v síti, kterou ovládáme, tak, aby místo pravdivých
 Jde o jednoduchý způsob, jak si vyzkoušet, jak DNS funguje, a také jak se dá DNS zneužít k uměleckým intervencím na síť.
 
 ## Prakticky
+### Vybrání domény
+Je potřeba si vybrat doménu, kterou chceme registrovat.
+Každý registrátor má jiné ceny a podmínky, a nenabízí všechny domény prvního řádu (.cz, .org, .gallery atd).
+Často je tedy potřeba projít několik registrátorů, než najdeme tu pravou doménu za tu pravou cenu.
+Po nalezení je dobré porovnat ceny, zda není doména někde jinde levněji.
 
+V česku jsou populární registrátoři:
+- [forpsi.com](https://www.forpsi.com/)
+- [wedos.com](https://www.wedos.cz/)
+- [web4u.cz](https://www.web4u.cz/)
+- [active24.cz](https://www.active24.cz/)
+
+Z mezinárodních registrátorů je populární například:
+- [namecheap.com](https://www.namecheap.com/)
+- [godaddy.com](https://www.godaddy.com/)
+
+Tip: pokud děláte/plánujete dělat více webů, je často praktické mít všechny domény u jednoho registrátora, protože je pak snazší spravovat DNS záznamy a orientovat se v jejich rozhraní.
+Ceny se často zase tolik neliší.
+
+Tip2: někdy registrátoři nabízí balíčky, například doména + hosting (wordpress, VPS), které jsou výhodnější, záleží na vašich potřebách.
+
+### Před registrací
+Některé národní a jiné domény vyžadují ověřený kontakt, v česku například domény .cz vyžadují ověření, že jste skutečná osoba nebo firma.
+Dnes se asi dá řešit pomocí přihlášení přeš bankovní identitu, identitu občana, nebo vytvoření [mojeID.cz](https://www.mojeid.cz/cs/).
+
+### Registrace
+Potvrdíme doménu, zaplatíme a za nějakou dobu bychom měli mít email od registrátora, že doména je naše.
+
+### DNS záznamy
+Nyní je potřeba nastavit DNS záznamy, které říkají, na jakou IP adresu má doména odkazovat.
+Pokud máme nějaký server, na kterém chceme mít web, musíme nastavit A záznam, který říká, na jakou IP adresu má doména odkazovat.
+IP adresu serveru, na kterém chceme mít web, zjistíme na daném stroji připojením přes SSH například příkazem `ifconfig` na Linuxu/Macu, nebo `ipconfig` na Windowsu (nejčastěji bude náš webserver Linuxový).
+
+Pokud chceme mít email na naší doméně, musíme nastavit MX záznam, který říká, na jaký server má směřovat email.
+
+Pokud chceme mít subdomény, například blog.favu.vut.cz, musíme nastavit CNAME záznam, který říká, na jakou doménu má odkazovat subdoména.
+
+### Čekání
+Po nastavení DNS záznamů je potřeba počkat, než se změny projeví - to může trvat od několika minut až po několik hodin.
+Tento čas je způsoben tím, že se DNS záznamy šíří po celém světě a každý DNS server si je ukládá na různě dlouhou dobu.
+
+### Ověření
+Počkáme, až se změny projeví, a potom můžeme ověřit, že vše funguje.
+Zkusíme zadat doménu do prohlížeče a uvidíme, zda se načte web, který jsme chtěli.
+Repeat until satisfied.
+
+### Příklad: Registrace u Forpsi
+1. dojdeme na https://www.forpsi.com/domain/
+2. zadáme jméno domény, kterou chceme registrovat, například `hacktivismus`
+3. vybereme doménu, kterou chceme registrovat, například `.cz`, `.org`, `.com`, můžeme vybrat i nějaké další TLD či novější gLTD
+4. klikneme na ověřit a zjistíme, které jsou volné
+5. pokud jsme nespokojení*é, opakujeme od bodu 2, jinak vybereme jednu nebo více domén a můžeme jít registrovat
 
 # Web 
 To, co jako uživatelstvo považujeme za webovou stránku, není ve své podstatě nic jiného než HTML soubor (často doplněný o CSS a JavaScript), který našemu prohlížeči na dané URI (uniform resource identifier) adrese poskytuje vzdálený počítač.
