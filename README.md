@@ -6,6 +6,11 @@ V procesu se chceme teoreticky i prakticky seznámit se SQL i NoSQL databázemi,
 
 ## Osnova předmětu LS 2023/2024
 
+- Staticky web s [Hugo Framework](/hugo.md)
+
+
+## Moznosti
+
 1. Úvod do kurzu, statický vs. dynamický web
 2. Doména – úvod problematiky IPv4/6 a DNS, registrace domény, editace DNS údajů, přiřazení domény k serveru
 3. Statický web - oprášení znalostí gitu, spuštění jednoduchého statického webu na vlastní doméně pomocí Github pages
@@ -15,3 +20,4 @@ V procesu se chceme teoreticky i prakticky seznámit se SQL i NoSQL databázemi,
 7. Database as a Service – Airtable
 8. Databáze – rozdíl mezi SQL, noSQL a graph databázemi. Seznámení s Python moduly SQLite a architekturou SQL, seznámení s modulem a architekturou MongoDB, pøipojení k databázi, tvorba dokumentu, přidávání záznamů, čtení, změny záznamù.
 9. Další témata dle konsenzuální dohody studujících. Konzultace a debugging semestrálních projektù.
+
