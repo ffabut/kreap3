@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+  {{ range site.RegularPages }}
+    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    Categories {{ .Params.categories }}
+    <button>{{ .Date }}</button>
+    <p>{{ .Summary }}</p>
+  {{ end }}
+  
+{{ end }}

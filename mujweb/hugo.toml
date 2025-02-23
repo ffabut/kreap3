@@ -1,0 +1,4 @@
+baseURL = 'https://kreap3.cz/'
+languageCode = 'en-us'
+title = 'My New Hugo Site LOL'
+theme = 'mujtheme'
