@@ -4,8 +4,12 @@ Repozitář pro předmět Kreativní programování 3 na Fakultě výtvarných u
 Předmět má za cíl seznámit studující s tvorbou webové aplikace od jejího vzniku až po spuštění online, tedy od registrace domény po deployment kódu v cloudovém prostředí či na virtuální server.
 V procesu se chceme teoreticky i prakticky seznámit se SQL i NoSQL databázemi, programováním handlerů pro GET, POST a další HTTP requesty, tvorbou HTML stránky s CSS a JavaScriptem komunikujícím s backend serverem či serverless funkcí a další.
 
-## Osnova předmětu LS 2023/2024
+## Osnova předmětu LS 2025
+- [Doména](/domena.md)
+- [Statický hosting](/static-hosting.md)
+- [Github actions v kombinaci s 11ty static site generatorem](https://github.com/ffabut/11ty-example)
 
+## Osnova předmětu LS 2024
 - Staticky web s [Hugo Framework](/hugo.md)
 
 
